@@ -107,13 +107,6 @@
       <a href="https://www.kinopoisk.ru/name/10370191/" target="_blank">Кинопоиск</a>
     </div>
 
-    <!-- YouTube -->
-    <div class="section">
-      <h2>Последнее видео YouTube</h2>
-      <iframe id="ytVideo"></iframe>
-      <p id="ytLoading">Загрузка...</p>
-    </div>
-
     <!-- TikTok -->
     <div class="section">
       <h2>Последнее видео TikTok</h2>
@@ -138,24 +131,6 @@
   <script async src="https://www.tiktok.com/embed.js"></script>
 
   <script>
-    const API_KEY = "AIzaSyASC6rlPM7GBwcNXnPPqsrzAGfqqYHEm20";
-    const CHANNEL_ID = "UCLEqGdhxRZd7dwQbkNFRifA";
-
-    async function loadLatestYouTube() {
-      try {
-        const url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=1`;
-        const res = await fetch(url);
-        const data = await res.json();
-
-        const videoId = data.items[0].id.videoId;
-        document.getElementById('ytVideo').src = `https://www.youtube.com/embed/${videoId}`;
-        document.getElementById('ytLoading').style.display = 'none';
-      } catch {
-        document.getElementById('ytLoading').innerText = 'Ошибка загрузки';
-      }
-    }
-
-    loadLatestYouTube();
 
     // Instagram pseudo API (ручное обновление)
     const posts = [
