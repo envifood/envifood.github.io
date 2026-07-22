@@ -1,163 +1,164 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Сергей Аралин</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #0f172a; color: white; text-align: center; }
-    .container { max-width: 900px; margin: auto; padding: 20px; }
-    .avatar { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-top: 20px; border: 3px solid #38bdf8; }
-    h1 { margin: 15px 0 5px; font-size: 32px; }
-    h2 { margin: 0 0 20px; font-weight: normal; color: #94a3b8; }
+<title>Сергей Аралин</title>
 
-    .links a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 15px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: white;
-      background: #1e293b;
-      transition: 0.3s;
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#0f172a;
+    color:#fff;
+}
+
+.container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.avatar{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #38bdf8;
+}
+
+h1{
+    margin-top:20px;
+    font-size:38px;
+}
+
+h2{
+    margin-top:10px;
+    color:#94a3b8;
+    font-weight:400;
+}
+
+.links{
+    margin:40px 0;
+}
+
+.links a{
+    display:inline-block;
+    margin:8px;
+    padding:14px 22px;
+    border-radius:12px;
+    text-decoration:none;
+    background:#1e293b;
+    color:#fff;
+    transition:.25s;
+}
+
+.links a:hover{
+    background:#38bdf8;
+    transform:translateY(-2px);
+}
+
+.section{
+    margin-top:60px;
+}
+
+.section h2{
+    color:#fff;
+    margin-bottom:30px;
+}
+
+.clips-grid{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.clips-grid iframe{
+    width:320px;
+    aspect-ratio:9/16;
+    border:none;
+    border-radius:18px;
+    background:#000;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+@media (max-width:1100px){
+
+    .clips-grid iframe{
+        width:290px;
     }
-    .links a:hover { background: #38bdf8; }
 
-    .section { margin-top: 40px; }
+}
 
-    iframe {
-      width: 100%;
-      max-width: 560px;
-      height: 315px;
-      border-radius: 12px;
-      border: none;
-      margin-top: 15px;
+@media (max-width:900px){
+
+    .clips-grid{
+        flex-direction:column;
+        align-items:center;
     }
 
-    /* Instagram real grid */
-    .insta-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-      margin-top: 20px;
+    .clips-grid iframe{
+        width:min(100%,360px);
     }
 
-    .insta-item {
-      position: relative;
-      width: 100%;
-      padding-top: 100%;
-      overflow: hidden;
-      border-radius: 10px;
-    }
+}
+</style>
 
-    .insta-item img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.3s;
-    }
-
-    .insta-item:hover img {
-      transform: scale(1.1);
-      filter: brightness(0.7);
-    }
-
-    .insta-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: 0.3s;
-      font-size: 14px;
-    }
-
-    .insta-item:hover .insta-overlay {
-      opacity: 1;
-    }
-
-    @media (max-width: 600px) {
-      .insta-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-  </style>
 </head>
 
 <body>
-  <div class="container">
 
-    <img src="https://i.taplink.st/a/e/c/0/b/9fb473.jpg" class="avatar">
-    <h1>Сергей Аралин</h1>
-    <h2>2D-аниматор</h2>
+<div class="container">
 
-    <div class="links">
-      <a href="https://t.me/AralinS" target="_blank">Telegram</a>
-      <a href="https://vk.com/sergeyaralin" target="_blank">VK</a>
-      <a href="https://www.instagram.com/sergeyaralin/" target="_blank">Instagram</a>
-      <a href="https://www.youtube.com/@aralins" target="_blank">YouTube</a>
-      <a href="https://www.tiktok.com/@aralins" target="_blank">TikTok</a>
-      <a href="https://www.kinopoisk.ru/name/10370191/" target="_blank">Кинопоиск</a>
-    </div>
+<img
+class="avatar"
+src="https://i.taplink.st/a/e/c/0/b/9fb473.jpg"
+alt="Сергей Аралин">
 
-    <!-- TikTok -->
-    <div class="section">
-      <h2>Последнее видео TikTok</h2>
-      <blockquote class="tiktok-embed"
-        cite="https://www.tiktok.com/@aralins/video/7661557623942155541"
-        data-video-id="7661557623942155541"
-        style="max-width: 325px; margin: auto;">
-        <section></section>
-      </blockquote>
-    </div>
+<h1>Сергей Аралин</h1>
+<h2>Визуальная СрЕда</h2>
 
-    <!-- Instagram real grid -->
-    <div class="section">
-      <h2>Instagram</h2>
+<div class="links">
 
-      <div class="insta-grid" id="instaGrid"></div>
+<a href="https://t.me/envifood" target="_blank">Telegram</a>
 
-    </div>
+<a href="https://vk.ru/envifood" target="_blank">VK</a>
 
-  </div>
+<a href="https://www.instagram.com/sergeyaralin/" target="_blank">Instagram</a>
 
-  <script async src="https://www.tiktok.com/embed.js"></script>
+<a href="https://www.youtube.com/@aralins" target="_blank">YouTube</a>
 
-  <script>
-    // Instagram pseudo API (ручное обновление)
-    const posts = [
-      {
-        link: "https://www.instagram.com/p/DR9hJNVD1hB/",
-        img: "https://scontent-hel3-1.cdninstagram.com/v/t51.82787-15/589746592_18557175778055594_8138660515851350565_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=106&ig_cache_key=Mzc4MjMyNTAzMDM4MzIxMjYwOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjcyMHg3MjAuc2RyLkMzIn0%3D&_nc_ohc=KeFMiDP9wEwQ7kNvwGJuXwT&_nc_oc=Adrc00U9YN43d9xLXsXuJRKcWhFLUaRJSUsUfTB59CqXA94Drp_YSfyzP6df46bOOXA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-hel3-1.cdninstagram.com&_nc_gid=7-gD1oX0fo5QSr3B7qJ8RQ&_nc_ss=7a32e&oh=00_Af1ClUBEQeAgEVzaS2U-1b36xNb7l1lkQAor6czdcKxj2Q&oe=69E2DAE6"
-      },
-      {
-        link: "https://www.instagram.com/p/CxYU2sYPB3Q/",
-        img: "https://scontent-hel3-1.cdninstagram.com/v/t51.71878-15/502275576_1206128494090722_760049055953621750_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=105&ig_cache_key=MzE5NTM5NTY1NTA1MjU2NTk2OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTA4MC5zZHIuQzMifQ%3D%3D&_nc_ohc=I7lNkBxSTNgQ7kNvwE5J86s&_nc_oc=AdoTef5y5eAEoaNvfG_16r4mg9vSazljkcZ5HDQQ2vClN_OIrlGHzJ4p6X8yOToU9kw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-hel3-1.cdninstagram.com&_nc_gid=7-gD1oX0fo5QSr3B7qJ8RQ&_nc_ss=7a32e&oh=00_Af0Wr93WW4RWTmbTvdK3I1Q5jiPwOKewYigeQI27Bx3YWA&oe=69E2AD08"
-      },
-      {
-        link: "https://www.instagram.com/p/Cbb-7TPluxd/",
-        img: "https://scontent-hel3-1.cdninstagram.com/v/t51.71878-15/642508605_1443054570814859_1529364946387375223_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=110&ig_cache_key=MjgwMDEwODM0NzMzNjM1NDkwOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4ODEwLnNkci5DMyJ9&_nc_ohc=xKBLCqm2pEgQ7kNvwGG2XR7&_nc_oc=Ado5umKI3KB1BuM2gU-k2OkHiRYxVMSm39EdPnZtRUcEdnK75utWGCckb3UcMNEk528&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-hel3-1.cdninstagram.com&_nc_gid=7-gD1oX0fo5QSr3B7qJ8RQ&_nc_ss=7a32e&oh=00_Af09IWa7_hG7m1pDM8U-W-tXSnTH9_d1sNdWdu7xrHCOOA&oe=69E2C035"
-      }
-    ];
+<a href="https://www.tiktok.com/@aralins" target="_blank">TikTok</a>
 
-    const grid = document.getElementById('instaGrid');
+<a href="https://www.kinopoisk.ru/name/10370191/" target="_blank">Кинопоиск</a>
 
-    posts.forEach(post => {
-      grid.innerHTML += `
-        <a href="${post.link}" target="_blank" class="insta-item">
-          <img src="${post.img}" />
-          <div class="insta-overlay">Смотреть</div>
-        </a>
-      `;
-    });
-  </script>
+</div>
+
+<div class="section">
+
+<h2>Свежие видосы</h2>
+
+<div class="clips-grid">
+
+<iframe src="https://vk.ru/clip_ext.php?oid=-8812625&id=456239025&autoplay=0" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" allowfullscreen></iframe>
+
+<iframe src="https://vk.ru/clip_ext.php?oid=-8812625&id=456239024&autoplay=0" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" allowfullscreen></iframe>
+
+<iframe src="https://vk.ru/clip_ext.php?oid=-8812625&id=456239017&autoplay=0" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" allowfullscreen></iframe>
+
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
